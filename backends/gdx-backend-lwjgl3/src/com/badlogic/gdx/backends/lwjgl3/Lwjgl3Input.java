@@ -250,6 +250,16 @@ public class Lwjgl3Input implements Input, Disposable {
 		return pointer == 0? isTouched(): false;
 	}
 
+	//@Override
+	public float getPressure () {
+		return getPressure(0);
+	}
+
+	//@Override
+	public float getPressure (int pointer) {
+		return isTouched(pointer) ? 1 : 0;
+	}
+
 	@Override
 	public boolean isButtonPressed(int button) {
 		return GLFW.glfwGetMouseButton(window.getWindowHandle(), button) == GLFW.GLFW_PRESS;

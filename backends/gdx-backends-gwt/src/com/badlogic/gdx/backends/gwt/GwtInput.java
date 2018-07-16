@@ -171,6 +171,16 @@ public class GwtInput implements Input {
 		return pressedButtons.contains(button) && touched[0];
 	}
 
+	//@Override
+	public float getPressure () {
+		return getPressure(0);
+	}
+
+	//@Override
+	public float getPressure (int pointer) {
+		return isTouched(pointer) ? 1 : 0;
+	}
+
 	@Override
 	public boolean isKeyPressed (int key) {
 		if (key == Keys.ANY_KEY) {
