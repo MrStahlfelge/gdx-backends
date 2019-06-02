@@ -22,14 +22,14 @@ The following changes are future work to these backends. I am aiming to remain c
 libGDX 1.9.8 until we have a more recent stable and useable version.
 
 ### All
-[ ] Possibility to override default behaviour with own subclasses (DI light)
+- [ ] Possibility to override default behaviour with own subclasses (DI light)
 
 ### iOS
-[ ] Adopt new devices and iOS 12 enhancements
+- [ ] Adopt new devices and iOS 12 enhancements
 
 ### GWT
-[ ] Adopt all fixes and enhancements that can be pulled to 1.9.8
-[ ] Change logging to JavaScript console
-[ ] [Switch to WebAudio](https://github.com/libgdx/libgdx/pull/4220)
-[ ] [Integrate faster bootstrap](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
-[ ] Implement HttpResponse with byte[]
+- [ ] Adopt all fixes and enhancements that can be pulled to 1.9.8
+- [ ] Change logging to JavaScript console
+- [ ] [Switch to WebAudio](https://github.com/libgdx/libgdx/pull/4220)
+- [ ] [Integrate faster bootstrap](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
+- [ ] Implement HttpResponse with byte[]
