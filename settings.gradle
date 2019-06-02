@@ -14,8 +14,6 @@
  * limitations under the License.
  ******************************************************************************/
 
-include ":gdx"
-
 include ":backends"
 include ":backends:gdx-backend-android"
 include ":backends:gdx-backend-headless"

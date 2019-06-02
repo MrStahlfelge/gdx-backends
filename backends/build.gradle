@@ -24,6 +24,6 @@ subprojects {
 
 
     dependencies {
-        compile project(":gdx")
+        compile "com.badlogicgames.gdx:gdx:${versions.gdx}"
     }
 }

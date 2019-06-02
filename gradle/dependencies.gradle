@@ -20,6 +20,7 @@ ext {
     testnatives = [:]
 }
 
+versions.gdx = "1.9.8"
 versions.robovm = "2.3.3"
 versions.moe = "1.4.0"
 versions.gwt = "2.8.0"
