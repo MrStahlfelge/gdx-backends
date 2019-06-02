@@ -1,8 +1,8 @@
 apply from: "gradle/dependencies.gradle"
 
 allprojects{
-    group = 'de.golfgl.gdx'
-    version = '1.98.0-SNAPSHOT'
+    group = 'com.badlogicgames.gdx'
+    version = '1.98.0'
 
     buildscript{
         repositories{

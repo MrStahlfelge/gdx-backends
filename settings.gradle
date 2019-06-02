@@ -24,3 +24,4 @@ include ":backends:gdx-backend-robovm"
 include ":backends:gdx-backends-gwt"
 
 rootProject.name = "libgdx"
+project(":backends:gdx-backends-gwt").name = "gdx-backend-gwt"
