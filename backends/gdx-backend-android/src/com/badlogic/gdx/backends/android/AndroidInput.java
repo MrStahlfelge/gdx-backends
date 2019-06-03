@@ -109,6 +109,7 @@ public class AndroidInput implements Input, OnKeyListener, OnTouchListener {
 	boolean[] touched = new boolean[NUM_TOUCHES];
 	int[] button = new int[NUM_TOUCHES];
 	int[] realId = new int[NUM_TOUCHES];
+	float[] pressure = new float[NUM_TOUCHES];
 	final boolean hasMultitouch;
 	private int keyCount = 0;
 	private boolean[] keys = new boolean[SUPPORTED_KEYS];
@@ -294,6 +295,16 @@ public class AndroidInput implements Input, OnKeyListener, OnTouchListener {
 		synchronized (this) {
 			return touched[pointer];
 		}
+	}
+
+	//@Override
+	public float getPressure () {
+		return getPressure(0);
+	}
+
+	//@Override
+	public float getPressure (int pointer) {
+		return pressure[pointer];
 	}
 
 	@Override
@@ -791,6 +802,7 @@ public class AndroidInput implements Input, OnKeyListener, OnTouchListener {
 			return (Build.VERSION.SDK_INT >= 11 && vibrator != null) ? vibrator.hasVibrator() : vibrator != null;
 		if (peripheral == Peripheral.MultitouchScreen) return hasMultitouch;
 		if (peripheral == Peripheral.RotationVector) return rotationVectorAvailable;
+		//if (peripheral == Peripheral.Pressure) return true;
 		return false;
 	}
 
@@ -829,11 +841,11 @@ public class AndroidInput implements Input, OnKeyListener, OnTouchListener {
 			if (realId[i] == pointerId) return i;
 		}
 
-		StringBuffer buf = new StringBuffer();
+		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < len; i++) {
-			buf.append(i + ":" + realId[i] + " ");
+			sb.append(i + ":" + realId[i] + " ");
 		}
-		Gdx.app.log("AndroidInput", "Pointer ID lookup failed: " + pointerId + ", " + buf.toString());
+		Gdx.app.log("AndroidInput", "Pointer ID lookup failed: " + pointerId + ", " + sb.toString());
 		return -1;
 	}
 
