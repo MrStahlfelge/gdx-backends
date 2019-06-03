@@ -12,8 +12,19 @@ For the moment based on the last officially announced libGDX version 1.9.8, but 
 ### How
 
 * Clone this repo
+* Checkout the revision you need (next paragraph)
 * Type `gradlew install`
 * Change your project's backend dependency to the one you wish
+
+## Changes compared to libGDX 1.9.8
+
+### 1.98.0
+
+This is exactly like libGDX 1.9.8. The backends in this version can be used only with libGDX 1.9.8.
+
+### 1.98.1-SNAPSHOT
+
+* GWT: Change logging to JavaScript console
 
 
 ## Things that will be done
@@ -21,15 +32,18 @@ For the moment based on the last officially announced libGDX version 1.9.8, but 
 The following changes are future work to these backends. I am aiming to remain compatibility to
 libGDX 1.9.8 until we have a more recent stable and useable version.
 
-### All
-- [ ] Possibility to override default behaviour with own subclasses (DI light)
-
 ### iOS
 - [ ] Adopt new devices and iOS 12 enhancements
+- [ ] Possibility to add new devices without changing the backend
+- [ ] Make it build against 1.9.8 and 1.9.9 core and ready to use for both versions
 
 ### GWT
+- [ ] Possibility to override default behaviour with own subclasses (DI light)
 - [ ] Adopt all fixes and enhancements that can be pulled to 1.9.8
-- [ ] Change logging to JavaScript console
 - [ ] [Switch to WebAudio](https://github.com/libgdx/libgdx/pull/4220)
 - [ ] [Integrate faster bootstrap](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
 - [ ] Implement HttpResponse with byte[]
+- [ ] Fix sounds on mobile
+- [ ] Check density problems on mobile
+- [ ] Check fullscreen on mobile
+- [ ] Make it build against 1.9.8 and 1.9.9 core and ready to use for both version
