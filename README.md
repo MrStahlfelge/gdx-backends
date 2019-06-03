@@ -22,9 +22,15 @@ For the moment based on the last officially announced libGDX version 1.9.8, but 
 
 This is exactly like libGDX 1.9.8. The backends in this version can be used only with libGDX 1.9.8.
 
+Use branch release/1.98.0 to use this version.
+
 ### 1.98.1-SNAPSHOT
 
+Can be used with libGDX 1.9.9 and 1.9.8.
+
 * GWT: Change logging to JavaScript console
+* Android, GWT, iOS: Added all fixes from 1.9.9.
+* iOS/GWT: Added support for pressure from 1.9.9 with one caveat: `isPeriphalAvailable` will report false for `Pressure`.
 
 
 ## Things that will be done
