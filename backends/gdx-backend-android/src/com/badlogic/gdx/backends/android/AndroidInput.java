@@ -143,7 +143,7 @@ public class AndroidInput implements Input, OnKeyListener, OnTouchListener {
 	private InputProcessor processor;
 	private final AndroidApplicationConfiguration config;
 	protected final Orientation nativeOrientation;
-	private long currentEventTimeStamp = System.nanoTime();
+	private long currentEventTimeStamp = 0;
 	private final AndroidOnscreenKeyboard onscreenKeyboard;
 
 	private SensorEventListener accelerometerListener;
