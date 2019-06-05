@@ -46,6 +46,7 @@ Downgraded from 1.9.10
 
 Own additions
 * GWT: Change logging to JavaScript console
+* GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220)
 
 ## Things that will be done
 
@@ -56,7 +57,6 @@ libGDX 1.9.8 until we have a more recent stable and useable version.
 - [ ] Possibility to add new devices without changing the backend
 
 ### GWT
-- [ ] [Switch to WebAudio](https://github.com/libgdx/libgdx/pull/4220) (fixes sounds for mobiles too)
 - [ ] [Accelerometer support](https://github.com/libgdx/libgdx/pull/5654)
 - [ ] Possibility to override default behaviour with own subclasses (DI light)
 - [ ] [Integrate faster bootstrap](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
