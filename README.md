@@ -56,10 +56,10 @@ libGDX 1.9.8 until we have a more recent stable and useable version.
 - [ ] Possibility to add new devices without changing the backend
 
 ### GWT
+- [ ] [Switch to WebAudio](https://github.com/libgdx/libgdx/pull/4220) (fixes sounds for mobiles too)
+- [ ] [Accelerometer support](https://github.com/libgdx/libgdx/pull/5654)
 - [ ] Possibility to override default behaviour with own subclasses (DI light)
-- [ ] [Switch to WebAudio](https://github.com/libgdx/libgdx/pull/4220)
 - [ ] [Integrate faster bootstrap](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
 - [ ] Implement HttpResponse with byte[]
-- [ ] Fix sounds on mobile
 - [ ] Check density problems on mobile
 - [ ] Check fullscreen on mobile
