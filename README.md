@@ -43,10 +43,10 @@ Downgraded from 1.9.10
 * iOS: Compatible with RoboVM 2.3.6 and this with iOS 12
 * iOS: New devices added
 * GWT: Use the real clipboard
+* GWT: Change logging to JavaScript console
 
 Own additions
-* GWT: Change logging to JavaScript console
-* GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220)
+* GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
 
 ## Things that will be done
 
