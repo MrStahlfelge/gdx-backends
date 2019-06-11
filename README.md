@@ -22,11 +22,11 @@ For the moment based on the last officially announced libGDX version 1.9.8, but 
 
 This is exactly like libGDX 1.9.8. The backends in this version can be used only with libGDX 1.9.8.
 
-Checkout branch release/1.98.0 to use this version.
+Checkout branch [release/1.98.0](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.98.0) to use this version.
 
 ### 1.98.1-SNAPSHOT
 
-Checkout branch master to use this version.
+Checkout branch `master` to use this version.
 
 Can be used with libGDX 1.9.9 and 1.9.8.
 
@@ -48,6 +48,7 @@ Downgraded from 1.9.10
 Own additions
 * GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
 * GWT: Unimplemented HttpResponse operations throw exceptions instead of returning null. [Current PR](https://github.com/libgdx/libgdx/pull/5661)
+* GWT: Accelerometer support [Current PR by @SimonIT](https://github.com/libgdx/libgdx/pull/5654)
 
 ## Things that will be done
 
@@ -59,7 +60,6 @@ libGDX 1.9.8 until we have a more recent stable and useable version.
 - [ ] Possibility to override default behaviour with own subclasses (DI light)
 
 ### GWT
-- [ ] [Accelerometer support](https://github.com/libgdx/libgdx/pull/5654)
-- [ ] [Integrate faster bootstrap](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
+- [ ] Integrate faster bootstrap based on [@MonsterOfCookie's ideas](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
 - [ ] Check density problems on mobile
 - [ ] Check fullscreen on mobile
