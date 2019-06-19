@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2011 See AUTHORS file.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -89,8 +89,8 @@ public class IOSApplicationConfiguration {
 	public boolean useCompass = true;
 
 	/** whether or not to allow background music from iPod **/
-	public boolean allowIpod = false;
-	
+	public boolean allowIpod = true;
+
 	/** whether or not the onScreenKeyboard should be closed on return key **/
 	public boolean keyboardCloseOnReturn = true;
 
@@ -98,10 +98,10 @@ public class IOSApplicationConfiguration {
 	 *  When GL ES 3 is enabled, {@link com.badlogic.gdx.Gdx#gl30} can be used to access it's functionality.
 	 * @deprecated this option is currently experimental and not yet fully supported, expect issues. */
 	@Deprecated public boolean useGL30 = false;
-	
+
 	/** whether the home indicator should be hidden or not **/
 	public boolean hideHomeIndicator = true;
-	
+
 	/** Whether to override the ringer/mute switch, see https://github.com/libgdx/libgdx/issues/4430 */
 	public boolean overrideRingerSwitch = false;
 
