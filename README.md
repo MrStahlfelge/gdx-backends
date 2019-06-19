@@ -47,9 +47,10 @@ Downgraded from 1.9.10
 
 Own additions
 * GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
-* GWT: Unimplemented HttpResponse operations throw exceptions instead of returning null. [Current PR](https://github.com/libgdx/libgdx/pull/5661)
+* GWT: Unimplemented HttpResponse operations throw exceptions instead of returning null. See [current PR](https://github.com/libgdx/libgdx/pull/5661).
 * GWT: Accelerometer support [Current PR by @SimonIT](https://github.com/libgdx/libgdx/pull/5654)
 * iOS: allowIpod defaults to true
+* iOS: Possibility to add new devices without changing the backend. See [current PR](https://github.com/libgdx/libgdx/pull/5676).
 
 ## Things that will be done
 
@@ -57,7 +58,6 @@ The following changes are future work to these backends. I am aiming to remain c
 libGDX 1.9.8 until we have a more recent stable and useable version.
 
 ### iOS
-- [ ] Possibility to add new devices without changing the backend
 - [ ] Possibility to override default behaviour with own subclasses (DI light)
 - [ ] iPhone X helper
 - [ ] keyboard handling
