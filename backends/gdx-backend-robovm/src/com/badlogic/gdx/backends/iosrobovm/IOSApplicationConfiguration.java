@@ -16,6 +16,8 @@
 
 package com.badlogic.gdx.backends.iosrobovm;
 
+import com.badlogic.gdx.utils.ObjectMap;
+
 import org.robovm.apple.glkit.GLKViewDrawableColorFormat;
 import org.robovm.apple.glkit.GLKViewDrawableDepthFormat;
 import org.robovm.apple.glkit.GLKViewDrawableMultisample;
@@ -108,4 +110,16 @@ public class IOSApplicationConfiguration {
 	/** Edges where app gestures must be fired over system gestures.
 	 * Prior to iOS 11, UIRectEdge.All was default behaviour if status bar hidden, see https://github.com/libgdx/libgdx/issues/5110 **/
 	public UIRectEdge screenEdgesDeferringSystemGestures = UIRectEdge.None;
+
+	ObjectMap<String, IOSDevice> knownDevices = IOSDevice.populateWithKnownDevices();
+
+	/**
+	 * adds device information for newer iOS devices, or overrides information for given ones
+	 * @param classifier human readable device classifier
+	 * @param machineString machine string returned by iOS
+	 * @param ppi device's pixel per inch value
+	 */
+	public void addIosDevice(String classifier, String machineString, int ppi) {
+		IOSDevice.addDeviceToMap(knownDevices, classifier, machineString, ppi);
+	}
 }
