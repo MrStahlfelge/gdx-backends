@@ -51,6 +51,7 @@ Own additions
 * GWT: Accelerometer support [Current PR by @SimonIT](https://github.com/libgdx/libgdx/pull/5654)
 * iOS: allowIpod defaults to true
 * iOS: Possibility to add new devices without changing the backend. See [current PR](https://github.com/libgdx/libgdx/pull/5676).
+* GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
 
 ## Things that will be done
 
@@ -63,6 +64,5 @@ libGDX 1.9.8 until we have a more recent stable and useable version.
 - [ ] keyboard handling
 
 ### GWT
-- [ ] Integrate faster bootstrap based on [@MonsterOfCookie's ideas](https://github.com/MonsterOfCookie/libGDXGwtHtmlExample)
 - [ ] Check density problems on mobile
 - [ ] Check fullscreen on mobile
