@@ -52,6 +52,7 @@ Own additions
 * iOS: allowIpod defaults to true
 * iOS: Possibility to add new devices without changing the backend. See [current PR](https://github.com/libgdx/libgdx/pull/5676).
 * GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
+* GWT: Preload logo and progress bar style adjustable. See [current PR](https://github.com/libgdx/libgdx/pull/5678).
 
 ## Things that will be done
 
