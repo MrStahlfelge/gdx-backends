@@ -44,15 +44,16 @@ Downgraded from 1.9.10
 * iOS: New devices added
 * GWT: Use the real clipboard
 * GWT: Change logging to JavaScript console
+* GWT: Unimplemented HttpResponse operations throw exceptions instead of returning null. [See PR](https://github.com/libgdx/libgdx/pull/5661).
+* GWT: Accelerometer support [See PR by @SimonIT](https://github.com/libgdx/libgdx/pull/5654)
+* iOS: allowIpod defaults to true
+* iOS: Possibility to add new devices without changing the backend. [See PR](https://github.com/libgdx/libgdx/pull/5676).
+* GWT: Preload logo and progress bar style adjustable. [See PR](https://github.com/libgdx/libgdx/pull/5678).
 
 Own additions
 * GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
-* GWT: Unimplemented HttpResponse operations throw exceptions instead of returning null. See [current PR](https://github.com/libgdx/libgdx/pull/5661).
-* GWT: Accelerometer support [Current PR by @SimonIT](https://github.com/libgdx/libgdx/pull/5654)
-* iOS: allowIpod defaults to true
-* iOS: Possibility to add new devices without changing the backend. See [current PR](https://github.com/libgdx/libgdx/pull/5676).
 * GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
-* GWT: Preload logo and progress bar style adjustable. See [current PR](https://github.com/libgdx/libgdx/pull/5678).
+* iOS: Make UIViewController customizable. See [current PR](https://github.com/libgdx/libgdx/pull/5684).
 
 ## Things that will be done
 
@@ -60,7 +61,6 @@ The following changes are future work to these backends. I am aiming to remain c
 libGDX 1.9.8 until we have a more recent stable and useable version.
 
 ### iOS
-- [ ] Possibility to override default behaviour with own subclasses (DI light)
 - [ ] iPhone X helper
 - [ ] keyboard handling
 
