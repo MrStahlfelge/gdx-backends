@@ -49,12 +49,12 @@ Downgraded from 1.9.10
 * iOS: allowIpod defaults to true
 * iOS: Possibility to add new devices without changing the backend. [See PR](https://github.com/libgdx/libgdx/pull/5676).
 * GWT: Preload logo and progress bar style adjustable. [See PR](https://github.com/libgdx/libgdx/pull/5678).
+* iOS: Make UIViewController customizable. See [current PR](https://github.com/libgdx/libgdx/pull/5684).
 
 Own additions
 * GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
 * GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
-* iOS: Make UIViewController customizable. See [current PR](https://github.com/libgdx/libgdx/pull/5684).
-* GWT: Fixed density problems on mobile with new config setting
+* GWT: Fixed density problems on mobile with new config setting. See [current PR](https://github.com/libgdx/libgdx/pull/5691)
 
 ## Things that will be done
 
