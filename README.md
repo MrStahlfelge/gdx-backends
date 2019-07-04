@@ -5,8 +5,8 @@ While there's always a way to work around bugs in the core project, this is ofte
 
 This is where this repo comes in.
 
-If you need to change build-in behaviour, but don't manage to get the complete libGDX repo to build, this repo is what you need.
-For the moment based on the last officially announced libGDX version 1.9.8, but feel free to modify.
+If you need to change build-in behaviour, but don't manage to get the complete libGDX repo to build, don't want to 
+build your very own version or don't want to use snapshot versions, this repo is what you need.
 
 
 ### How
@@ -24,21 +24,22 @@ This is exactly like libGDX 1.9.8. The backends in this version can be used only
 
 Checkout branch [release/1.98.0](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.98.0) to use this version.
 
-### 1.98.1-SNAPSHOT
+### 1.98.1
 
 Checkout branch `master` to use this version.
 
 Can be used with libGDX 1.9.9 and 1.9.8.
 
-This is mainly targeted towards replacing the original GWT and iOS backends for libGDX 1.9.8.
+This is mainly targeted towards replacing the original GWT and iOS backends for libGDX 1.9.8 if you need one of the 
+following improvements:
 
-Downgraded from 1.9.9
+Downgraded from libGDX 1.9.9
 * Android, GWT, iOS: Added all fixes from 1.9.9 (check the commit history)
 * iOS/GWT: Added support for pressure from 1.9.9 with one caveat: `isPeriphalAvailable` will report false for `Pressure`.
 * iOS: Added configuration options for iPhone X (hideHomeIndicator, screenEdgesDeferringSystemGestures) from 1.9.9
 * iOS: New devices added
 
-Downgraded from 1.9.10
+Downgraded from libGDX 1.9.10
 * Android, GWT, iOS: Added all fixes from 1.9.10-SNAPSHOT as of 05/31/19 (check the commit history)
 * iOS: Compatible with RoboVM 2.3.6 and this with iOS 12
 * iOS: New devices added
@@ -56,11 +57,11 @@ Own additions
 * GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
 * GWT: Fixed density problems on mobile with new config setting. See [current PR](https://github.com/libgdx/libgdx/pull/5691)
 
-## Things that will be done
-
-The following changes are future work to these backends. I am aiming to remain compatibility to
-libGDX 1.9.8 until we have a more recent stable and useable version.
+## Future work
 
 ### iOS
 - [ ] iPhone X helper
 - [ ] keyboard handling
+
+### GWT
+- [ ] Move resizable browser window support into the backend, no template hazzle any more
