@@ -59,9 +59,6 @@ Own additions
 
 ## Future work
 
-### iOS
-- [ ] iPhone X helper
-- [ ] keyboard handling
-
 ### GWT
 - [ ] Move resizable browser window support into the backend, no template hazzle any more
+- [ ] Electron extensions
