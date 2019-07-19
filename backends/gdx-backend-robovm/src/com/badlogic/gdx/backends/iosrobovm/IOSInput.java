@@ -261,6 +261,11 @@ public class IOSInput implements Input {
 	}
 
 	@Override
+	public int getMaxPointers () {
+		return MAX_TOUCHES;
+	}
+
+	@Override
 	public int getX () {
 		return touchX[0];
 	}
@@ -320,12 +325,12 @@ public class IOSInput implements Input {
 		return touchDown[pointer] != 0;
 	}
 
-	//@Override
+	@Override
 	public float getPressure () {
 		return pressures[0];
 	}
 
-	//@Override
+	@Override
 	public float getPressure (int pointer) {
 		return pressures[pointer];
 	}
@@ -333,6 +338,11 @@ public class IOSInput implements Input {
 	@Override
 	public boolean isButtonPressed (int button) {
 		return button == Buttons.LEFT && numTouched > 0;
+	}
+
+	@Override
+	public boolean isButtonJustPressed(int button) {
+		return button == Buttons.LEFT && justTouched;
 	}
 
 	@Override
@@ -540,6 +550,16 @@ public class IOSInput implements Input {
 	}
 
 	@Override
+	public void setCatchKey (int keycode, boolean catchKey) {
+
+	}
+
+	@Override
+	public boolean isCatchKey (int keycode) {
+		return false;
+	}
+
+	@Override
 	public void setInputProcessor (InputProcessor processor) {
 		this.inputProcessor = processor;
 	}
@@ -556,7 +576,7 @@ public class IOSInput implements Input {
 		if (peripheral == Peripheral.Vibrator) return hasVibrator;
 		if (peripheral == Peripheral.Compass) return compassSupported;
 		if (peripheral == Peripheral.OnscreenKeyboard) return true;
-		//if (peripheral == Peripheral.Pressure) return pressureSupported;
+		if (peripheral == Peripheral.Pressure) return pressureSupported;
 		return false;
 	}
 

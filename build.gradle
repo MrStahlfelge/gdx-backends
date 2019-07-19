@@ -2,22 +2,22 @@ apply from: "gradle/dependencies.gradle"
 
 allprojects{
     group = 'com.badlogicgames.gdx'
-    version = '1.98.1'
+    version = '1.910.0'
 
-    buildscript{
-        repositories{
-            mavenCentral()
-            jcenter()
-            maven{ url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    buildscript {
+        repositories {
             google()
+            jcenter()
+            mavenCentral()
+            maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         }
     }
 
-    repositories{
-        mavenCentral()
-        jcenter()
-        maven{ url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    repositories {
         google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 }
 

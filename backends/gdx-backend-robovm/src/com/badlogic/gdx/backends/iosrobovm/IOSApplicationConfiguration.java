@@ -114,6 +114,12 @@ public class IOSApplicationConfiguration {
 	 * Prior to iOS 11, UIRectEdge.All was default behaviour if status bar hidden, see https://github.com/libgdx/libgdx/issues/5110 **/
 	public UIRectEdge screenEdgesDeferringSystemGestures = UIRectEdge.None;
 
+	/** The maximum number of threads to use for network requests. Default is {@link Integer#MAX_VALUE}. */
+	public int maxNetThreads = Integer.MAX_VALUE;
+
+	/** whether to use audio or not. Default is <code>true</code> **/
+	public boolean useAudio = true;
+
 	ObjectMap<String, IOSDevice> knownDevices = IOSDevice.populateWithKnownDevices();
 
 	/**
