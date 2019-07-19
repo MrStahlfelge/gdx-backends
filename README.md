@@ -16,7 +16,24 @@ build your very own version or don't want to use snapshot versions, this repo is
 * Type `gradlew install`
 * Change your project's backend dependency to the one you wish
 
-## Changes compared to libGDX 1.9.8
+## For use with libGDX 1.9.10 core
+
+### 1.910.0
+
+Checkout branch master to use this version.
+
+Own additions
+* GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
+* GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
+* GWT: Fixed density problems on mobile with new config setting. See [current PR](https://github.com/libgdx/libgdx/pull/5691)
+
+## Future work
+
+### GWT
+- [ ] Move resizable browser window support into the backend, no template hazzle any more
+- [ ] Electron extensions
+
+## For use with libGDX 1.9.8 core
 
 ### 1.98.0
 
@@ -26,7 +43,7 @@ Checkout branch [release/1.98.0](https://github.com/MrStahlfelge/gdx-backends/tr
 
 ### 1.98.1
 
-Checkout branch `master` to use this version.
+Checkout branch [release/1.98.1](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.98.1) to use this version.
 
 Can be used with libGDX 1.9.9 and 1.9.8.
 
@@ -56,9 +73,3 @@ Own additions
 * GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
 * GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
 * GWT: Fixed density problems on mobile with new config setting. See [current PR](https://github.com/libgdx/libgdx/pull/5691)
-
-## Future work
-
-### GWT
-- [ ] Move resizable browser window support into the backend, no template hazzle any more
-- [ ] Electron extensions

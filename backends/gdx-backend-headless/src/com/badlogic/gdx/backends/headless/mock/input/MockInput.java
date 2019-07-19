@@ -115,16 +115,6 @@ public class MockInput implements Input {
 		return false;
 	}
 
-	//@Override
-	public float getPressure () {
-		return 0;
-	}
-
-	//@Override
-	public float getPressure (int pointer) {
-		return 0;
-	}
-
 	@Override
 	public float getPressure () {
 		return 0;
