@@ -2,7 +2,7 @@ apply from: "gradle/dependencies.gradle"
 
 allprojects{
     group = 'com.badlogicgames.gdx'
-    version = '1.910.0'
+    version = '1.910.1'
 
     buildscript {
         repositories {
