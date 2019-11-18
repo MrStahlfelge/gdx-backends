@@ -52,6 +52,7 @@ Checkout branch master to use this version, or use the following dependencies fo
 Own additions:
 * GWT: Fix for getPeriphalAvailable reporting accelerometer present on desktop. [Pending PR](https://github.com/libgdx/libgdx/pull/5758)
 * GWT: Pulled feature policy implementation by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5784)
+* GWT: GWT preferences NPE fix by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5838)
 
 
 ## Future work
