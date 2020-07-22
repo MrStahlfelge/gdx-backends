@@ -47,12 +47,14 @@ Own additions
 
 Checkout branch master to use this version, or use the following dependencies for GWT:
 
-      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:master-SNAPSHOT'
+      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.910.1'
+
+Downgraded from libGDX 1.9.11:
+* GWT: Fix for getPeriphalAvailable reporting accelerometer present on desktop. [Pending PR](https://github.com/libgdx/libgdx/pull/5758)
+* GWT: GWT preferences NPE fix by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5838)
 
 Own additions:
-* GWT: Fix for getPeriphalAvailable reporting accelerometer present on desktop. [Pending PR](https://github.com/libgdx/libgdx/pull/5758)
 * GWT: Pulled feature policy implementation by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5784)
-* GWT: GWT preferences NPE fix by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5838)
 
 
 ## Future work
