@@ -49,12 +49,26 @@ Checkout branch master to use this version, or use the following dependencies fo
 
       implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.910.1'
 
-Downgraded from libGDX 1.9.11:
+Downgraded from pending PRs:
 * GWT: Fix for getPeriphalAvailable reporting accelerometer present on desktop. [Pending PR](https://github.com/libgdx/libgdx/pull/5758)
 * GWT: GWT preferences NPE fix by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5838)
-
-Own additions:
 * GWT: Pulled feature policy implementation by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5784)
+
+### 1.910.2
+
+Downgraded from libGDX 1.9.11:
+
+* iOS: Create interfaces for Audio and Input on MobiVM. [Original PR](https://github.com/libgdx/libgdx/pull/6013)
+* iOS: Changed deprecated input UI view to new API. [Original PR](https://github.com/libgdx/libgdx/pull/6059)
+
+Own additions
+* iOS: Handles hardware keyboard events like on other platforms
+
+Checkout branch master to use this version, or use the following dependencies for iOS or GWT:
+
+      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-robovm:master-SNAPSHOT'
+      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:master-SNAPSHOT'
+
 
 
 ## Future work
