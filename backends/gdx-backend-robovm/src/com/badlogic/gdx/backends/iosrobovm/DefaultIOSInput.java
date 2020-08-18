@@ -54,6 +54,7 @@ import org.robovm.apple.uikit.UITextSpellCheckingType;
 import org.robovm.apple.uikit.UITouch;
 import org.robovm.apple.uikit.UITouchPhase;
 import org.robovm.objc.annotation.Method;
+import org.robovm.objc.block.VoidBlock1;
 import org.robovm.rt.VM;
 import org.robovm.rt.bro.NativeObject;
 import org.robovm.rt.bro.annotation.MachineSizedUInt;
