@@ -130,8 +130,9 @@ public class DefaultIOSInput implements IOSInput {
 	private IntSet keysToCatch = new IntSet();
 	private boolean keyJustPressed = false;
 	private int keyCount = 0;
-	private final boolean[] keys = new boolean[256];
-	private final boolean[] justPressedKeys = new boolean[256];
+	private boolean hadHardwareKeyEvent = true;
+    private final boolean[] keys = new boolean[256];
+    private final boolean[] justPressedKeys = new boolean[256];
 
 	public DefaultIOSInput (IOSApplication app) {
 		this.app = app;
@@ -600,6 +601,7 @@ public class DefaultIOSInput implements IOSInput {
 		if (peripheral == Peripheral.Compass) return compassSupported;
 		if (peripheral == Peripheral.OnscreenKeyboard) return true;
 		if (peripheral == Peripheral.Pressure) return pressureSupported;
+		if (peripheral == Peripheral.HardwareKeyboard) return hadHardwareKeyEvent;
 		return false;
 	}
 
@@ -659,6 +661,8 @@ public class DefaultIOSInput implements IOSInput {
 
 		if (keyCode != Keys.UNKNOWN)
 			synchronized (keyEvents) {
+				hadHardwareKeyEvent = true;
+
 				KeyEvent event = keyEventPool.obtain();
 				long timeStamp = System.nanoTime();
 				event.timeStamp = timeStamp;
