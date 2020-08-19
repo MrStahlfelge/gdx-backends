@@ -45,7 +45,7 @@ Own additions
 
 ### 1.910.1
 
-Checkout branch master to use this version, or use the following dependencies for GWT:
+Checkout branch [release/1.910.1](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.910.1) to use this version, or use the following dependencies for GWT:
 
       implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.910.1'
 
@@ -56,20 +56,18 @@ Downgraded from pending PRs:
 
 ### 1.910.2
 
+Checkout branch [release/1.910.2](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.910.2) to use this version, or use the following dependencies for iOS or GWT:
+
+      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-robovm:1.910.2'
+      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.910.2'
+
 Downgraded from libGDX 1.9.11:
 
 * iOS: Create interfaces for Audio and Input on MobiVM. [Original PR](https://github.com/libgdx/libgdx/pull/6013)
 * iOS: Changed deprecated input UI view to new API. [Original PR](https://github.com/libgdx/libgdx/pull/6059)
 
 Own additions
-* iOS: Handles hardware keyboard events like on other platforms
-
-Checkout branch master to use this version, or use the following dependencies for iOS or GWT:
-
-      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-robovm:master-SNAPSHOT'
-      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:master-SNAPSHOT'
-
-
+* iOS: Handles hardware keyboard events like on other platforms [Pending PR](https://github.com/libgdx/libgdx/pull/6132)
 
 ## Future work
 
