@@ -68,6 +68,7 @@ public abstract class GwtApplication implements EntryPoint, Application {
 	private ApplicationListener listener;
 	GwtApplicationConfiguration config;
 	GwtGraphics graphics;
+	private GwtAudio audio;
 	private GwtInput input;
 	private GwtNet net;
 	private Panel root = null;
@@ -180,9 +181,10 @@ public abstract class GwtApplication implements EntryPoint, Application {
 	}
 
 	void setupLoop () {
+		Gdx.app = this;
 		// setup modules
-		try {			
-			graphics = new GwtGraphics(root, config);			
+		try {
+			graphics = new GwtGraphics(root, config);
 		} catch (Throwable e) {
 			root.clear();
 			root.add(getNoWebGLSupportWidget());
@@ -190,18 +192,17 @@ public abstract class GwtApplication implements EntryPoint, Application {
 		}
 		lastWidth = graphics.getWidth();
 		lastHeight = graphics.getHeight();
-		Gdx.app = this;
-
-		if(config.disableAudio) {
-			Gdx.audio = null;
-		} else {
-			Gdx.audio = new GwtAudio();
-		}
 		Gdx.graphics = graphics;
 		Gdx.gl20 = graphics.getGL20();
 		Gdx.gl = Gdx.gl20;
+		if(config.disableAudio) {
+			audio = null;
+		} else {
+			audio = createAudio();
+		}
+		Gdx.audio = audio;
 		Gdx.files = new GwtFiles(preloader);
-		this.input = new GwtInput(graphics.canvas, this.config);
+		this.input = createInput(graphics.canvas, this.config);
 		Gdx.input = this.input;
 		this.net = new GwtNet(config);
 		Gdx.net = this.net;
@@ -335,7 +336,7 @@ public abstract class GwtApplication implements EntryPoint, Application {
 
 	@Override
 	public Audio getAudio () {
-		return Gdx.audio;
+		return audio;
 	}
 
 	@Override
@@ -455,6 +456,14 @@ public abstract class GwtApplication implements EntryPoint, Application {
 
 	@Override
 	public void exit () {
+	}
+
+	protected GwtAudio createAudio () {
+		return new DefaultGwtAudio();
+	}
+
+	protected GwtInput createInput(CanvasElement canvas, GwtApplicationConfiguration config) {
+		return new DefaultGwtInput(canvas, config);
 	}
 
     /**
