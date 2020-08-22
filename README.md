@@ -29,93 +29,29 @@ Don't forget to add Jitpack as a repo to your project:
 	    }
     }
 
-## For use with libGDX 1.9.10 core
+## For use with libGDX 1.9.11 core
 
-### 1.910.0
+### 1.911.0
 
-Checkout branch [release/1.910.0](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.910.0) to use this version, or use
+Checkout branch [release/1.911.0](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.911.0) to use this version, or use
 the following dependencies for GWT:
 
-       implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.910.0'
+      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.911.0'
+      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-robovm:1.911.0'
 
-Own additions
+Additions compared to official backends for 1.9.11:
 * GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
 * GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
 * GWT: Fixed density problems on mobile with new config setting. See [current PR](https://github.com/libgdx/libgdx/pull/5691)
-
-### 1.910.1
-
-Checkout branch [release/1.910.1](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.910.1) to use this version, or use the following dependencies for GWT:
-
-      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.910.1'
-
-Downgraded from pending PRs:
-* GWT: Fix for getPeriphalAvailable reporting accelerometer present on desktop. [Pending PR](https://github.com/libgdx/libgdx/pull/5758)
-* GWT: GWT preferences NPE fix by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5838)
 * GWT: Pulled feature policy implementation by @SimonIT. [Pending PR](https://github.com/libgdx/libgdx/pull/5784)
-
-### 1.910.2
-
-Checkout branch [release/1.910.2](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.910.2) to use this version, or use the following dependencies for iOS or GWT:
-
-      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-robovm:1.910.2'
-      implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.910.2'
-
-Downgraded from libGDX 1.9.11:
-
-* iOS: Create interfaces for Audio and Input on MobiVM. [Original PR](https://github.com/libgdx/libgdx/pull/6013)
-* iOS: Changed deprecated input UI view to new API. [Original PR](https://github.com/libgdx/libgdx/pull/6059)
-
-Own additions
 * iOS: Handles hardware keyboard events like on other platforms [Pending PR](https://github.com/libgdx/libgdx/pull/6132)
 
-## Future work
+## Work still to do
 
 ### GWT
 - [ ] Move resizable browser window support into the backend, no template hazzle any more
 - [ ] Electron extensions
 
-## For use with libGDX 1.9.8 core
+## For use with libGDX 1.9.10 core, or if you are still on 1.9.8 or 1.9.9...
 
-### 1.98.0
-
-This is exactly like libGDX 1.9.8. The backends in this version can be used only with libGDX 1.9.8.
-
-Checkout branch [release/1.98.0](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.98.0) to use this version.
-
-### 1.98.1
-
-Checkout branch [release/1.98.1](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.98.1) to use this version, or use
-the following dependencies for iOS or GWT:
-
-     implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-gwt:1.98.1'
-     implementation 'com.github.MrStahlfelge.gdx-backends:gdx-backend-robovm:1.98.1'
-
-Can be used with libGDX 1.9.9 and 1.9.8.
-
-This is mainly targeted towards replacing the original GWT and iOS backends for libGDX 1.9.8 if you need one of the 
-following improvements:
-
-Downgraded from libGDX 1.9.9
-* Android, GWT, iOS: Added all fixes from 1.9.9 (check the commit history)
-* iOS/GWT: Added support for pressure from 1.9.9 with one caveat: `isPeriphalAvailable` will report false for `Pressure`.
-* iOS: Added configuration options for iPhone X (hideHomeIndicator, screenEdgesDeferringSystemGestures) from 1.9.9
-* iOS: New devices added
-
-Downgraded from libGDX 1.9.10
-* Android, GWT, iOS: Added all fixes from 1.9.10-SNAPSHOT as of 05/31/19 (check the commit history)
-* iOS: Compatible with RoboVM 2.3.6 and this with iOS 12
-* iOS: New devices added
-* GWT: Use the real clipboard
-* GWT: Change logging to JavaScript console
-* GWT: Unimplemented HttpResponse operations throw exceptions instead of returning null. [See PR](https://github.com/libgdx/libgdx/pull/5661).
-* GWT: Accelerometer support [See PR by @SimonIT](https://github.com/libgdx/libgdx/pull/5654)
-* iOS: allowIpod defaults to true
-* iOS: Possibility to add new devices without changing the backend. [See PR](https://github.com/libgdx/libgdx/pull/5676).
-* GWT: Preload logo and progress bar style adjustable. [See PR](https://github.com/libgdx/libgdx/pull/5678).
-* iOS: Make UIViewController customizable. See [current PR](https://github.com/libgdx/libgdx/pull/5684).
-
-Own additions
-* GWT: Switched to WebAudio, fixes sounds for mobiles too. [Original PR by @barkholt](https://github.com/libgdx/libgdx/pull/4220). See [current PR](https://github.com/libgdx/libgdx/pull/5659) for more information.
-* GWT: Faster bootstrap process by lazy loading assets. See [current PR](https://github.com/libgdx/libgdx/pull/5677) for more information.
-* GWT: Fixed density problems on mobile with new config setting. See [current PR](https://github.com/libgdx/libgdx/pull/5691)
+See readme on branch [release/1.910.2](https://github.com/MrStahlfelge/gdx-backends/tree/release/1.910.2)
