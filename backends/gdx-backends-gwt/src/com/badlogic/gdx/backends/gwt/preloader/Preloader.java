@@ -235,7 +235,7 @@ public class Preloader {
 			binaries.put(asset.url, (Blob) result);
 			break;
 		case Audio:
-			audio.put(asset.url, null);
+			audio.put(asset.url, (Blob) result);
 			break;
 		case Directory:
 			directories.put(asset.url, null);

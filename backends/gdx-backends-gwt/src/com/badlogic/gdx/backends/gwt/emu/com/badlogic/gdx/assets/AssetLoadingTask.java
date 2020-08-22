@@ -16,12 +16,9 @@
 
 package com.badlogic.gdx.assets;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.loaders.AssetLoader;
 import com.badlogic.gdx.assets.loaders.AsynchronousAssetLoader;
 import com.badlogic.gdx.assets.loaders.SynchronousAssetLoader;
-import com.badlogic.gdx.backends.gwt.GwtApplication;
-import com.badlogic.gdx.backends.gwt.preloader.Preloader;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.GdxRuntimeException;
@@ -30,7 +27,6 @@ import com.badlogic.gdx.utils.TimeUtils;
 import com.badlogic.gdx.utils.async.AsyncExecutor;
 import com.badlogic.gdx.utils.async.AsyncResult;
 import com.badlogic.gdx.utils.async.AsyncTask;
-import com.badlogic.gdx.utils.async.ThreadUtils;
 
 /** Responsible for loading an asset through an {@link AssetLoader} based on an {@link AssetDescriptor}.
  * 
@@ -49,7 +45,7 @@ class AssetLoadingTask implements AsyncTask<Void> {
 	volatile AsyncResult<Void> loadFuture;
 	volatile Object asset;
 
-    int ticks = 0;
+	int ticks = 0;
 	volatile boolean cancel;
 
 	public AssetLoadingTask (AssetManager manager, AssetDescriptor assetDesc, AssetLoader loader, AsyncExecutor threadPool) {
