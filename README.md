@@ -29,6 +29,10 @@ Don't forget to add Jitpack as a repo to your project:
 	    }
     }
 
+### News & Community
+
+You can get help on the [libgdx discord](https://discord.gg/6pgDK9F).
+
 ## For use with libGDX 1.9.11 core
 
 ### 1.911.0
