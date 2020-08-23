@@ -19,6 +19,11 @@ allprojects{
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
+
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
 }
 
 subprojects{
